@@ -5,7 +5,11 @@ the markdown folder structure.
 
 ## Installation
 
-```shell
+```shell    
+npm install -g markdown-folder-to-sidebar
+```
+
+```shell    
 npm install markdown-folder-to-sidebar
 ```
 

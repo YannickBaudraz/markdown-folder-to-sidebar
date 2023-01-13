@@ -1,5 +1,5 @@
 {
-  "name": "github-sidebar-generator",
+  "name": "markdown-folder-to-sidebar",
   "version": "0.0.1",
   "description": "A simple tool to convert a markdown folder structure into a Github wiki sidebar",
   "main": "src/index.js",
