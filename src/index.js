@@ -51,12 +51,20 @@ function extractPathContent(filePath, level) {
 }
 
 function extractFileContent(filePath, level, extract) {
-  if (path.extname(getFile(filePath)) !== '.md') {
+  if (!isMdFile(filePath) || isSidebarFile(filePath)) {
     return;
   }
 
   extract.filesContent += extractMdH1ToListEl(filePath, level);
   return extract;
+}
+
+function isMdFile(filePath) {
+  return path.extname(filePath) === '.md';
+}
+
+function isSidebarFile(filePath) {
+  return path.basename(filePath) === '_Sidebar.md';
 }
 
 function extractMdH1ToListEl(filePath, level) {
