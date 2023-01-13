@@ -56,7 +56,7 @@ function extractMdH1ToListEl(filePath, indent) {
 
   let listElement = '';
   parsedContent.forEach((token, index) => {
-    if (token.type === 'heading_open') {
+    if (token.type === 'heading_open' && token.tag === 'h1') {
       const text = parsedContent[index + 1].content;
       const file = path.basename(filePath);
       const link = path.basename(file, path.extname(file));
