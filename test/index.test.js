@@ -37,8 +37,8 @@ describe('Markdown Folder to Sidebar tests', () => {
     expect(sidebarContent).toEqual(expectedContent);
   });
 
-  it('should generate the correct sidebar content for folders,'
-      + 'and only take markdown files', function() {
+  it('should generate the correct sidebar content for folders, '
+      + 'and only take markdown files', () => {
     // Given
     const expectedContent = fs.readFileSync('_Sidebar.expected.md', 'utf8');
     assertNonMarkdownFileInFolder('example');
