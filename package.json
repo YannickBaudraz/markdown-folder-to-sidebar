@@ -21,6 +21,7 @@
   "homepage": "https://github.com/yannickcpnv/markdown-folder-to-sidebar#readme",
   "dependencies": {
     "commander": "^9.5.0",
+    "glob": "^8.0.3",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
