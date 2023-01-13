@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const fs = require('fs');
 const MarkdownIt = require('markdown-it');
 const path = require('path');
@@ -39,7 +40,7 @@ function generateSidebarContent(folder, level = 0) {
         return;
       }
 
-      const mdList = extractMdH1ToListEl(filePath, indent)
+      const mdList = extractMdH1ToListEl(filePath, indent);
       filesContent += mdList;
     } else {
       foldersContent += `${indent}- ${file}\n`;

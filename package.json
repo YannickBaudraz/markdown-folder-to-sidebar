@@ -1,6 +1,6 @@
 {
   "name": "markdown-folder-to-sidebar",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A simple tool to convert a markdown folder structure into a Github wiki sidebar",
   "main": "src/index.js",
   "scripts": {
@@ -11,6 +11,14 @@
   "bin": {
     "mdf-2-sidebar": "src/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yannickcpnv/markdown-folder-to-sidebar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yannickcpnv/markdown-folder-to-sidebar/issues"
+  },
+  "homepage": "https://github.com/yannickcpnv/markdown-folder-to-sidebar#readme",
   "dependencies": {
     "commander": "^9.5.0",
     "markdown-it": "^13.0.1"
