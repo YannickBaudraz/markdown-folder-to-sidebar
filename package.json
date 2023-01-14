@@ -6,7 +6,17 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "markdown",
+    "wiki",
+    "sidebar",
+    "github",
+    "wiki-sidebar",
+    "github-wiki-sidebar",
+    "cli",
+    "command-line",
+    "command-line-interface"
+  ],
   "author": "yannickbaudrazdev@gmail.com",
   "bin": {
     "mdf-2-sidebar": "src/index.js"

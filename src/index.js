@@ -16,7 +16,7 @@ if (!program.opts().folder) {
   process.exit(1);
 }
 
-const sidebarHeader = '# Navigation\n\n';
+const sidebarHeader = '# Navigation\n\n- [Home](Home)\n';
 const sidebarContent = sidebarHeader + generateSidebarContent(options.folder);
 writeSidebarInFile(sidebarContent);
 
@@ -51,7 +51,7 @@ function extractPathContent(filePath, level) {
 }
 
 function extractFileContent(filePath, level, extract) {
-  if (!isMdFile(filePath) || isSidebarFile(filePath)) {
+  if (!isMdFile(filePath) || isFileToExclude(filePath)) {
     return;
   }
 
@@ -63,8 +63,19 @@ function isMdFile(filePath) {
   return path.extname(filePath) === '.md';
 }
 
+function isFileToExclude(filePath) {
+  return [
+    isSidebarFile,
+    isHomeFile,
+  ].some((isForbidden) => isForbidden(filePath));
+}
+
 function isSidebarFile(filePath) {
-  return path.basename(filePath) === '_Sidebar.md';
+  return getFile(filePath) === '_Sidebar.md';
+}
+
+function isHomeFile(filePath) {
+  return getFile(filePath) === 'Home.md';
 }
 
 function extractMdH1ToListEl(filePath, level) {
