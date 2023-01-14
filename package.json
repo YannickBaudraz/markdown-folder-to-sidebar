@@ -1,6 +1,6 @@
 {
   "name": "markdown-folder-to-sidebar",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A simple tool to convert a markdown folder structure into a Github wiki sidebar",
   "main": "src/index.js",
   "scripts": {
